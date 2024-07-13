@@ -1,0 +1,38 @@
+@media (max-width: 672px) {
+    button {
+        margin-right: 0px!important;
+        margin-bottom: 4px;
+    }
+}
+
+@media (max-width: 576px) {
+    .table-custom-width-xs {
+        width: 85%!important;
+    }
+
+    .xs-hide {
+        display: none;
+    }
+
+    button {
+        margin-right: 0px!important;
+        margin-bottom: 4px;
+    }
+
+    button i {
+        align-items: center;
+    }
+
+    .td-001-xs-width {
+        width: 40%!important;
+    }
+
+    .td-002-xs-width {
+        width: 5%!important;
+    }
+
+    .td-003-xs-width {
+        width: 10%!important;
+    }
+
+}

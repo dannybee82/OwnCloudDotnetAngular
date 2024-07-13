@@ -1,0 +1,17 @@
+<div class="mb-3">
+    <button 
+        type="button" 
+        for="formFile" 
+        [class]="'btn text-light ' + this.buttonColor()" 
+        (click)="openFile.value = '';openFile.click();">
+            <i class="{{ this.buttonClass() }}"></i>
+            {{ this.buttonText() }}
+    </button>
+    <input 
+        class="form-control" 
+        type="file" 
+        id="formFile" 
+        [accept]="this.fileExtensions()" 
+        #openFile (change)="onFileSelected($event)" 
+        [multiple]="this.multipleFiles()">
+</div>

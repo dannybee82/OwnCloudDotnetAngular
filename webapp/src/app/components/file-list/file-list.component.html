@@ -1,0 +1,52 @@
+<div class="container-fluid">  
+    <app-go-back-button></app-go-back-button>  
+    @if(this.allFiles$ | async; as files) {
+        @if(files.length > 0) {
+            <table class="table table-custom-width-xs">
+                <thead>
+                    <tr>
+                        <th>Filename</th>
+                        <th>Extension</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    @for(file of files; track file) {
+                        <tr>
+                            <td class="td-001-xs-width">{{ file.fileName }}</td>
+                            <td class="td-002-xs-width">{{ file.fileExtension }}</td>
+                            <td class="td-003-xs-width">
+                                <button type="button" class="btn btn-primary me-2" title="Download" (click)="download(file.filePath)">
+                                    <i class="bi bi-download me-1"></i>
+                                    <span class="xs-hide">Download</span>
+                                </button>
+                                <button class="btn btn-danger" title="Delete File" (click)="showDeleteDialog(file)">
+                                    <i class="bi bi-trash me-1"></i>
+                                    <span class="xs-hide">Delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                    }          
+                </tbody>
+            </table>
+            @if(this.showDialog()) {
+                <app-confirm-dialog 
+                    [title]="'Delete file'"
+                    [question]="'Do you really want to delete the file below?'"
+                    [additionalData]="this.filenameToDelete()"
+                    [cancellationColor]="'btn-secondary'"                    
+                    [confirmationText]="'Delete File'"
+                    [confirmationColor]="'btn-danger'"
+                    [confirmationIcon]="'bi-trash'"
+                    (getConfirmation)="delete($event)">
+                </app-confirm-dialog>
+            }            
+        } @else {
+            <div class="row ps-2">
+                <div class="col-auto p-1 bg-danger text-light rounded">
+                    There is no files list available.
+                </div>
+            </div>
+        }   
+    }
+</div>

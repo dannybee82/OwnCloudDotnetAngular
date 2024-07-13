@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <app-go-back-button></app-go-back-button>
+    <div class="row">
+        <app-open-file 
+            [fileExtensions]="'application/pdf,image/jpg,image/jpeg,image/png,image/gif,text/csv'" 
+            [buttonClass]="'bi bi-file-earmark'"
+            [buttonText]="'Select File'" 
+            (selectedFile)="this.loadFile($event)">
+        </app-open-file>
+    </div>
+    <div class="row">
+        @if(this.isValidFile()) {
+            <div class="col-auto">
+                <button type="button" class="btn btn-success" (click)="upload()">
+                    <i class="bi bi-cloud-arrow-up me-1"></i>
+                    <span>Upload file</span>
+                </button>
+            </div>
+            <div class="col-auto text-success pt-2">
+                <i class="bi bi-file-earmark me-1"></i>
+                <span class="ms-2">File is valid.</span>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container-fluid confirm-modal d-flex justify-content-center" (click)="this.closeDialog()">
+    <div class="container confirm-contents rounded p-3" (click)="$event.stopPropagation()">
+        <div class="row">
+            <div class="col-auto">
+                <h3>{{ this.title() }}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-auto">
+                {{ this.question() }}
+            </div>
+        </div>
+        <div class="row" *ngIf="this.additionalData() !== ''">
+            <div class="col-auto">
+                {{ this.additionalData() }}
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-4">
+                <button type="button" class="btn {{this.cancellationColor()}}" (click)="this.cancel()">
+                    <i class="bi {{this.cancellationIcon()}}"></i>
+                    <span class="ms-1">{{ this.cancellationText() }}</span>
+                </button>
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn {{this.confirmationColor()}}" (click)="this.ok()">
+                    <i class="bi bi-check2"></i>
+                    <span class="ms-1">{{ this.confirmationText() }}</span>
+                </button>
+            </div>
+        </div>        
+    </div>
+</div>
