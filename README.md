@@ -1,10 +1,10 @@
-### **OwnCloud + dotnet/C# API + Angular 18 app**
+### **OwnCloud + dotnet/C# API + Angular 19 app**
 
 A demo that works on localhost and in development-mode only.
 
 *   Runs OwnCloud/Server in a docker-container.
 *   Backend: dotnet/C# Web API.
-*   Frontend: Angular 18 app
+*   Frontend: Angular 19 app
 
 Change the ports, usernames and passwords in **docker-compose.yml** to the needs.
 
@@ -18,7 +18,7 @@ The backend/web API needs an **OwnCloud-Token**.
 
 To get this **token** follow the steps: 
 
-_Login to OwnCloud_ -> Upper right / username -> _Settings_ \-> Tab at left: _Security_.
+_Login to OwnCloud_ -> Upper right / username -> _Settings_ -> Tab at left: _Security_.
 
 In CORS and White-listed Domains: add:  
 **https://localhost:5001**
@@ -26,9 +26,9 @@ In CORS and White-listed Domains: add:
 Below in the **Security Tab**:  
 Type an app name and click '_Create new app passcode_' (which will be visibile only once).
 
-Copy and paste this _token_ to **appsettings.Development.json** \- see the _WebDAV_ section:
+Copy and paste this _token_ to **appsettings.Development.json** - see the _WebDAV_ section:
 
- `"OwnCloudToken": "OWN_CLOUD_TOKEN_HERE",`
+`"OwnCloudToken": "OWN_CLOUD_TOKEN_HERE",`
 
 The backend allows the following file formats:
 
@@ -47,7 +47,7 @@ To add more file formats, see the lines in **Program.cs** and extend this to the
 `FileFormat = FileFormatLocator.GetFormats().OfType<FileSignatures.Formats.Jpeg>()`  
 `}, //(...)`
 
-### **Frontend: Angular 18 app**
+### **Frontend: Angular 19 app**
 
 Install packages:
 

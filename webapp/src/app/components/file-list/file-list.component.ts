@@ -11,7 +11,6 @@ import { FileDeleted } from '../../models/file-deleted.interface';
 
 @Component({
   selector: 'app-file-list',
-  standalone: true,
   imports: [
     AsyncPipe,
     GoBackButtonComponent,

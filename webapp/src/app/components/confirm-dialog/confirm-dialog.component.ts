@@ -2,7 +2,6 @@ import { Component, InputSignal, input, OutputEmitterRef, output} from '@angular
 import { CommonModule } from '@angular/common';
 
 @Component({
-	standalone: true,
 	imports: [
 		CommonModule,
 	],

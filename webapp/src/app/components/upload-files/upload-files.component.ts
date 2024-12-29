@@ -9,7 +9,6 @@ import { forkJoin, from, Observable, of, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-upload-files',
-  standalone: true,
   imports: [
     GoBackButtonComponent,
     OpenFileComponent

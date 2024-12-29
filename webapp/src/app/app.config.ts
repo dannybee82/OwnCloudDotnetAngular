@@ -4,8 +4,8 @@ import { routes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { importProvidersFrom } from '@angular/core';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { NgHttpLoaderModule } from 'ng-http-loader';
+import { provideHttpClient, withInterceptors, withInterceptorsFromDi } from '@angular/common/http';
+import { pendingRequestsInterceptor$ } from 'ng-http-loader';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -13,9 +13,9 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideAnimations(), 
     provideHttpClient(
+      withInterceptors([pendingRequestsInterceptor$]),
       withInterceptorsFromDi()
     ),
-    importProvidersFrom([NgHttpLoaderModule.forRoot()]),
     importProvidersFrom([ToastrModule.forRoot({ positionClass: 'toast-bottom-center' })])
   ]
 };

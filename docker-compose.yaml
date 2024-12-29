@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   owncloud:
-    image: owncloud/server:10.14
+    image: owncloud/server:10.15
     container_name: owncloud-server
     restart: unless-stopped
     ports:
@@ -51,7 +51,7 @@ services:
       - mysql:/var/lib/mysql
 
   redis:
-    image: redis:7.2.5
+    image: redis:7.4.1
     container_name: owncloud-redis
     restart: unless-stopped
     command: ["--databases", "1"]

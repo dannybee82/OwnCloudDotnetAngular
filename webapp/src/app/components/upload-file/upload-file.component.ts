@@ -8,7 +8,6 @@ import { FileUploadStatus } from '../../models/file-upload-status.interface';
 
 @Component({
   selector: 'app-upload-files',
-  standalone: true,
   imports: [
     GoBackButtonComponent,
     OpenFileComponent

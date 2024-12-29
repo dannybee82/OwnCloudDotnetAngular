@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
-import { NgHttpLoaderModule } from 'ng-http-loader';
+import { NgHttpLoaderComponent } from 'ng-http-loader';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
 		RouterOutlet,
-    NgHttpLoaderModule, 
-    LoadingSpinnerComponent,
+    NgHttpLoaderComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
