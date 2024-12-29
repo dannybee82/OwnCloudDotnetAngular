@@ -10,11 +10,13 @@
                 {{ this.question() }}
             </div>
         </div>
-        <div class="row" *ngIf="this.additionalData() !== ''">
-            <div class="col-auto">
-                {{ this.additionalData() }}
+        @if(this.additionalData() !== '') {
+            <div class="row">
+                <div class="col-auto">
+                    {{ this.additionalData() }}
+                </div>
             </div>
-        </div>
+        }        
         <div class="row mt-2">
             <div class="col-4">
                 <button type="button" class="btn {{this.cancellationColor()}}" (click)="this.cancel()">
