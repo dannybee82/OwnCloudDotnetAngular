@@ -48,7 +48,7 @@ namespace TestOwnCloudConnect.Controllers
 
         //Note: [FromForm] attribute not working, due to version of Swagger.
         [HttpPost("UploadFile")]
-        public async Task<IActionResult> UploadFile(IFormFile file)
+        public async Task<IActionResult> UploadFile([FromForm] IFormFile file)
         {
             try
             {

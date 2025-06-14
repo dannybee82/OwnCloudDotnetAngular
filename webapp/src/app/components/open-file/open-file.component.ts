@@ -8,14 +8,14 @@ import { Component, InputSignal, input, OutputEmitterRef, output, EventEmitter, 
 
 export class OpenFileComponent {
 
-  buttonColor: InputSignal<string> = input<string>("btn-primary");
-  buttonText: InputSignal<string> = input<string>('');
-  buttonClass: InputSignal<string> = input<string>('');
-  fileExtensions: InputSignal<string> = input<string>('');
-  multipleFiles: InputSignal<boolean> = input<boolean>(false);
+  readonly buttonColor: InputSignal<string> = input<string>("btn-primary");
+  readonly buttonText: InputSignal<string> = input<string>('');
+  readonly buttonClass: InputSignal<string> = input<string>('');
+  readonly fileExtensions: InputSignal<string> = input<string>('');
+  readonly multipleFiles: InputSignal<boolean> = input<boolean>(false);
 
-  selectedFile: OutputEmitterRef<File> = output<File>();
-  selectedFiles: OutputEmitterRef<File[]> = output<File[]>();
+  readonly selectedFile: OutputEmitterRef<File> = output<File>();
+  readonly selectedFiles: OutputEmitterRef<File[]> = output<File[]>();
 
   onFileSelected(event: any) {
     const files: File[] = event.target.files;

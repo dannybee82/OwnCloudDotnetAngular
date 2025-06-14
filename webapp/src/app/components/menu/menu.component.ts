@@ -11,8 +11,6 @@ import { RouterModule } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
 }

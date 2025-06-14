@@ -18,7 +18,7 @@ import { FileUploadStatus } from '../../models/file-upload-status.interface';
 export class UploadFileComponent implements OnInit {
 
   private _file: File | undefined = undefined;
-  isValidFile: WritableSignal<boolean> = signal(false);
+  protected isValidFile: WritableSignal<boolean> = signal(false);
 
 	private toastr = inject(ToastrService);
   private uploadFilesService = inject(UploadFilesService);

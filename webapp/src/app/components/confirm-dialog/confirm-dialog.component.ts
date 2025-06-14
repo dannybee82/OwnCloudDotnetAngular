@@ -7,17 +7,17 @@ import { Component, InputSignal, input, OutputEmitterRef, output} from '@angular
 })
 export class ConfirmDialogComponent {
 
-  title: InputSignal<string> = input<string>('');
-  question: InputSignal<string> = input<string>('');
-  additionalData: InputSignal<string> = input<string>('');
-  cancellationText: InputSignal<string> = input<string>('Cancel');
-  cancellationColor: InputSignal<string> = input<string>('btn-danger');
-  cancellationIcon: InputSignal<string> = input<string>('bi-x-circle');
-  confirmationText: InputSignal<string> = input<string>('Ok');
-  confirmationColor: InputSignal<string> = input<string>('btn-success');
-  confirmationIcon: InputSignal<string> = input<string>('bi-check2');
+  readonly title: InputSignal<string> = input<string>('');
+  readonly question: InputSignal<string> = input<string>('');
+  readonly additionalData: InputSignal<string> = input<string>('');
+  readonly cancellationText: InputSignal<string> = input<string>('Cancel');
+  readonly cancellationColor: InputSignal<string> = input<string>('btn-danger');
+  readonly cancellationIcon: InputSignal<string> = input<string>('bi-x-circle');
+  readonly confirmationText: InputSignal<string> = input<string>('Ok');
+  readonly confirmationColor: InputSignal<string> = input<string>('btn-success');
+  readonly confirmationIcon: InputSignal<string> = input<string>('bi-check2');
 
-  getConfirmation: OutputEmitterRef<boolean> = output<boolean>()
+  readonly getConfirmation: OutputEmitterRef<boolean> = output<boolean>()
 
   closeDialog() : void {
     this.getConfirmation.emit(false);

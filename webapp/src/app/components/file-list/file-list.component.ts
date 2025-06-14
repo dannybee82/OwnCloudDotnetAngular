@@ -21,10 +21,10 @@ import { FileDeleted } from '../../models/file-deleted.interface';
 })
 export class FileListComponent implements OnInit {
 
-  allFiles$?: Observable<FileInfo[]>;
+  public allFiles$?: Observable<FileInfo[]>;
 
-  showDialog: WritableSignal<boolean> = signal(false);
-  filenameToDelete: WritableSignal<string> = signal('');
+  protected showDialog: WritableSignal<boolean> = signal(false);
+  protected filenameToDelete: WritableSignal<string> = signal('');
   private _deleteThis: FileInfo | undefined = undefined;
 
   private _downloadFile: DownloadFile = new DownloadFile();

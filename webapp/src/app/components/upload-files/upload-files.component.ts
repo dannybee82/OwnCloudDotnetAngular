@@ -19,7 +19,7 @@ import { forkJoin, from, Observable, of, switchMap } from 'rxjs';
 export class UploadFilesComponent implements OnInit {
 
 	private _files: File[] | undefined = undefined;
-  isValidFile: WritableSignal<boolean> = signal(false);
+  protected isValidFile: WritableSignal<boolean> = signal(false);
 
 	private toastr = inject(ToastrService);
   private uploadFilesService = inject(UploadFilesService);

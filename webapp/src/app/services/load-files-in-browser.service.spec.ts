@@ -1,5 +1,4 @@
 ﻿import { TestBed } from '@angular/core/testing';
-
 import { LoadFilesInBrowserService } from './load-files-in-browser.service';
 
 describe('LoadFilesInBrowserService', () => {

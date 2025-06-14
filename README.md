@@ -1,4 +1,4 @@
-### **OwnCloud + dotnet/C# API + Angular 19 app**
+### **OwnCloud + dotnet/C# API + Angular 20 app**
 
 A demo that works on localhost and in development-mode only.
 
@@ -47,7 +47,7 @@ To add more file formats, see the lines in **Program.cs** and extend this to the
 `FileFormat = FileFormatLocator.GetFormats().OfType<FileSignatures.Formats.Jpeg>()`  
 `}, //(...)`
 
-### **Frontend: Angular 19 app**
+### **Frontend: Angular 20 app (with** [**Angular CLI**](https://github.com/angular/angular-cli) **version 20.0.1) + Bootstrap 5**
 
 Install packages:
 
@@ -56,6 +56,10 @@ Install packages:
 or the short command:
 
 **npm i**
+
+\[!\] _June 2025:_ At this moment the package _ng-http-loader_ has not been updated yet, so the command is (for now):
+
+**npm i --force**
 
 Command to run the Angular app:
 
@@ -88,3 +92,29 @@ And change code in the templates:
 `</app-open-file>`
 
 See the root of this project for example-images.
+
+### **Changelog:**
+
+_June 2025_
+
+**C# WebAPI:**
+
+\- Updated dependencies.
+
+**Angular App:**
+
+\- Upgrade to Angular 20.
+
+\- Removed unnecessary package _@angular/platform-browser-dynamic_
+
+\- Using the keyword **protected** for properties that are only accessible in the template.
+
+\- Using the keyword **readonly** for properties initialized by Angular (input(), output(), model()).
+
+\- Suppressing deprecation warnings of _Bootstrap_ in _angular.json_ with the code:
+
+`"stylePreprocessorOptions": {`  
+`"sass": {`  
+`"silenceDeprecations": ["mixed-decls", "color-functions", "global-builtin", "import"]`  
+`}`  
+`},`
