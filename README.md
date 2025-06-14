@@ -4,7 +4,7 @@ A demo that works on localhost and in development-mode only.
 
 *   Runs OwnCloud/Server in a docker-container.
 *   Backend: dotnet/C# Web API.
-*   Frontend: Angular 19 app
+*   Frontend: Angular 20 app
 
 Change the ports, usernames and passwords in **docker-compose.yml** to the needs.
 
@@ -47,7 +47,7 @@ To add more file formats, see the lines in **Program.cs** and extend this to the
 `FileFormat = FileFormatLocator.GetFormats().OfType<FileSignatures.Formats.Jpeg>()`  
 `}, //(...)`
 
-### **Frontend: Angular 20 app (with** [**Angular CLI**](https://github.com/angular/angular-cli) **version 20.0.1) + Bootstrap 5**
+### **Frontend: Angular 20 app (with** [**Angular CLI**](https://github.com/angular/angular-cli) **version 20.0.2) + Bootstrap 5**
 
 Install packages:
 
