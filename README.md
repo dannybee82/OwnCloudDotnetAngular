@@ -57,10 +57,6 @@ or the short command:
 
 **npm i**
 
-\[!\] _June 2025:_ At this moment the package _ng-http-loader_ has not been updated yet, so the command is (for now):
-
-**npm i --force**
-
 Command to run the Angular app:
 
 **ng serve --open**
@@ -118,3 +114,5 @@ _June 2025_
 `"silenceDeprecations": ["mixed-decls", "color-functions", "global-builtin", "import"]`  
 `}`  
 `},`
+
+\- Upgraded _ng-http-loader_ to 18.0.0

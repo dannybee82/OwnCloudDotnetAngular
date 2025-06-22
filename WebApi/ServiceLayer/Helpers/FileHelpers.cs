@@ -23,7 +23,7 @@ namespace ServiceLayer.Helpers
             string[] spltted = fileName.Split('.');
             int lastPart = spltted.Length - 1;
 
-            return lastPart > -1 ? spltted[lastPart] : "";
+            return lastPart > -1 ? spltted[lastPart].ToLower() : "";
         }
 
     }
